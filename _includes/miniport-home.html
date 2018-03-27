@@ -1,0 +1,132 @@
+<!-- Home page design with small circular image bisecting card. -->
+
+{% assign essay_pages = site.pages | where: "type", "essay"  | where_exp: "page", "page.draft != true" %}
+{% assign project_pages = site.pages | where: "type", "project" | where_exp: "page", "page.draft != true" %}
+{% assign num_essays = essay_pages.size %}
+{% assign num_projects = project_pages.size %}
+
+{% include menubar.html active="essays" %}$
+
+<div class="wrapper style1 first">
+  <article class="container" id="top">
+    <div class="row">
+      <div class="4u 12u(mobile)">
+        <span class="image fit"><img src="{{ site.data.bio.basics.picture }}"></span>
+      </div>
+      <div class="8u 12u(mobile)">
+        <header>
+          <h1><strong>{{ site.data.bio.basics.name }}</strong>.</h1>
+        </header>
+        <p>{{ site.data.bio.basics.summary }}</p>
+        <a href="#portfolio" class="button big scrolly">Mes compétences</a>
+      </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="wrapper style2">
+  <article id="portfolio">
+    <header>
+      <h2>Mes domaines de compétences</h2>
+      <p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat lorem ipsum dolore.</p>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="4u 12u(mobile)">
+          <article class="box style2">
+            <span class="icon featured fa-child"></span>
+            <h3><a href="#">L'enfance</a></h3>
+            <p>Je travaille avec enfants et préadulte.</p>
+          </article>
+        </div>
+        <div class="4u 12u(mobile)">
+          <article class="box style2">
+            <span class="icon featured fa-user"></span>
+            <h3><a href="#">Autisme</a></h3>
+            <p>Ornare nulla proin odio consequat.</p>
+          </article>
+        </div>
+        <div class="4u 12u(mobile)">
+          <article class="box style2">
+            <span class="icon featured fa-wheelchair"></span>
+            <h3><a href="#">Déficience mentaux</a></h3>
+            <p>Ornare nulla proin odio consequat.</p>
+          </article>
+        </div>
+      </div>
+
+    </div>
+    <footer>
+      <p>Je mantiens également un journal où j'aborde divers sujet lié à ma profession</p>
+      <a href="{{ site.baseurl }}/journaux/" class="button big scrolly">Accèder à mon journal</a>
+    </footer>
+  </article>
+</div>
+
+
+<div class="wrapper style3">
+  <article id="work">
+    <header>
+      <h2>Mes activités</h2>
+      <p>Je propose les trucs suivants etc etc</p>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div class="6u 12u(mobile)">
+          <section class="box style1">
+            <span class="icon featured fa-comments-o"></span>
+            <h3>Guidance parentale</h3>
+            <p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+          </section>
+        </div>
+        <div class="6u 12u(mobile)">
+          <section class="box style1">
+            <span class="icon featured fa-users"></span>
+            <h3>Groupe de compétences sociale</h3>
+            <p>Ornare nulla proin odio consequat sapien vestibulum ipsum primis sed amet consequat lorem dolore.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>J'exerce essentiellement dans les régions ouest et sud (Saint-Paul -> Saint-Joseph)</p>
+      <a href="#contact" class="button big scrolly">Contactez-moi</a>
+    </footer>
+  </article>
+</div>
+
+
+    <!-- Contact -->
+      <div class="wrapper style4">
+        <article id="contact" class="container 75%">
+            <div class="row">
+              <div class="12u">
+                <h2>Pour me contacter </h2>
+                <ul class="social">
+                  <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                  <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+                  <li><a href="#" class="icon fa-at"><span class="label">Mail</span></a></li>
+                  <li><a href="#" class="icon fa-phone"><span class="label">Téléphone</span></a></li>
+                  <!--
+                  <li><a href="#" class="icon fa-rss"><span>RSS</span></a></li>
+                  <li><a href="#" class="icon fa-instagram"><span>Instagram</span></a></li>
+                  <li><a href="#" class="icon fa-foursquare"><span>Foursquare</span></a></li>
+                  <li><a href="#" class="icon fa-skype"><span>Skype</span></a></li>
+                  <li><a href="#" class="icon fa-soundcloud"><span>Soundcloud</span></a></li>
+                  <li><a href="#" class="icon fa-youtube"><span>YouTube</span></a></li>
+                  <li><a href="#" class="icon fa-blogger"><span>Blogger</span></a></li>
+                  <li><a href="#" class="icon fa-flickr"><span>Flickr</span></a></li>
+                  <li><a href="#" class="icon fa-vimeo"><span>Vimeo</span></a></li>
+                  -->
+                </ul>
+                <hr />
+              </div>
+          </div>
+          <footer>
+            <ul id="copyright">
+              <li>&copy; Audrey FARGE.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+          </footer>
+        </article>
+      </div>

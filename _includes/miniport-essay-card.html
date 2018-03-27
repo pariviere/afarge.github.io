@@ -1,0 +1,16 @@
+<!-- Used by theme-essays-builtin-1 -->
+
+<div class="4u 12u(mobile)">
+  <article class="box style2">
+    
+  <div class="content">
+    <h3><a href="#">{{ include.page.title }}</a></h3>
+    <p>
+      {{ include.page.content | markdownify | strip_html | truncatewords: 40 }}
+    </p>
+  </div>
+  </article>
+
+
+  <a class="ui bottom attached button" href="{{ site.baseurl}}{{ include.page.url }}">Lire la suite...</a>
+</div>
