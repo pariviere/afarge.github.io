@@ -25,3 +25,10 @@ rouge-theme: igorpro
 markdown: kramdown
 include: [_data]
 
+lang: "fr_FR"
+title: "Audrey FARGE, psychologue clinicienne à la Réunion"
+description: "spécialisée dans les troubles du spectre autistique (TSA) et plus particulièrement du syndrôme d'Asperger"
+
+plugins:
+  - jekyll-seo-tag
+
